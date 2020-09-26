@@ -1,0 +1,337 @@
+#sfida1{
+    display: none;
+    border: 2px solid #ccc;
+    background-color: #6e6e69;
+    height: 500px;
+    width: 980px;
+}
+
+#makina{
+    height: 100px;
+    width: 200px;
+    transform: rotate(180deg);
+    position: relative;
+}
+
+#parking{
+    background-color: #6e6e69;
+    border: 2px dashed white;
+    height: 87px;
+    width: 200px;
+    position: relative;
+    left: 500px;
+    top:100px;
+    padding-top: 5px;
+    border-radius: 7px;
+}
+
+#teksti{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 25px;
+    resize: none;
+    color: #85847D;
+    font-weight: bold;
+}
+
+.container5{
+    display:none;
+    margin-left: 7%;
+    margin-right:7%; 
+}
+
+.pjesa1{
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.rreshti{
+    display: flex;
+}
+
+.kolona{
+    flex: 50%;
+    height: 120px;
+}
+
+.kolona h1{
+    font-family: 'Aldrich';
+    color:#25CBA8;
+    font-size: 40px;
+}
+
+.kolona h3{
+    color:#D6A713;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.kolona p{
+    color: #85847D;
+    font-size:23px;
+    font-weight: 550;
+}
+
+.kolona h4{
+    color:#85847D;
+}
+
+.kolona h4 span{
+    color: #DAB80C;
+}
+
+.btnn{
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #929897;
+    padding: 17px 60px;
+    margin-top:5%;
+    margin-left: 20%;
+    border-radius: 4px;
+  }
+
+  .btnn span {
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .btnn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 400%;
+    width: 140%;
+    background: #ECD023;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+
+  .btnn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+
+  #test{
+      color:white;
+      font-size: 30px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #sfida1 hr{
+      border-top: 1px dashed white;
+      border-bottom: none;
+      position: relative;
+      width:500px;
+      margin-left:0%;
+      margin-top: 2%;
+  }
+
+  #sfida1 h4{
+      position: relative;
+      color: white;
+      margin-left: 18%;
+      margin-top: -5%;
+      font-family: 'Aldrich';
+      font-weight: lighter;
+  }
+
+  #loading{
+    border: 2px solid #ccc;
+    background-color: #404456;
+    height: 500px;
+    width: 980px;
+  }
+
+  #loader {
+    position: absolute;
+    top: 98%;
+    left: 65%;
+    margin-top: 5em;
+    margin-left: -2.7em;
+    width: 5.4em;
+    height: 5.4em;
+    background-color: #404456;
+  }
+  
+  #hill {
+    position: absolute;
+    width: 7.1em;
+    height: 7.1em;
+    top: 1.7em;
+    left: 1.7em;
+    background-color: transparent;
+    border-left: .25em solid whitesmoke;
+    transform: rotate(45deg);
+  }
+  
+  #hill:after {
+    content: '';
+    position: absolute;
+    width: 7.1em;
+    height: 7.1em;
+    left: 0;
+    background-color: #404456;
+  }
+  
+  #box {
+    position: absolute;
+    left: 0;
+    bottom: -.1em;
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    border: .25em solid whitesmoke;
+    border-radius: 15%;
+    transform: translate(0, -1em) rotate(-45deg);
+    animation: push 2.5s cubic-bezier(.79, 0, .47, .97) infinite;
+  }
+  
+  @keyframes push {
+    0% {
+      transform: translate(0, -1em) rotate(-45deg);
+    }
+    5% {
+      transform: translate(0, -1em) rotate(-50deg);
+    }
+    20% {
+      transform: translate(1em, -2em) rotate(47deg);
+    }
+    25% {
+      transform: translate(1em, -2em) rotate(45deg);
+    }
+    30% {
+      transform: translate(1em, -2em) rotate(40deg);
+    }
+    45% {
+      transform: translate(2em, -3em) rotate(137deg);
+    }
+    50% {
+      transform: translate(2em, -3em) rotate(135deg);
+    }
+    55% {
+      transform: translate(2em, -3em) rotate(130deg);
+    }
+    70% {
+      transform: translate(3em, -4em) rotate(217deg);
+    }
+    75% {
+      transform: translate(3em, -4em) rotate(220deg);
+    }
+    100% {
+      transform: translate(0, -1em) rotate(-225deg);
+    }
+  }
+
+  #belowAnimation h3{
+    position: relative;
+    margin-top: 32%;
+    text-align: center;
+    font-family: 'Aldrich';
+    font-weight: lighter;
+    color:white;
+  }
+
+  #starto{
+      color:#ECD023;
+      font-family: 'Aldrich';
+      border: 1px solid #ECD023;
+      padding:9px 30px;
+      background-color: transparent;
+      margin-left: 40%;
+      border-radius: 8px;
+      font-size: 20px;
+  }
+
+  #starto:hover{
+      background-color: #ECD023;
+      color:white;
+  }
+
+#logout{
+  display: none;
+}
+
+#playGame{
+  display: none;
+}
+
+#fitore{
+  display: none;
+  position: absolute;
+  top: 30%;
+  left:30%;
+  right:30%;
+  bottom: 30%;
+  background-color: whitesmoke;
+  border: 4px solid #EFA909;
+  border-radius:8px;
+}
+
+#fitore h2{
+  position: relative;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Aldrich';
+  color: #979797;
+}
+
+#fitore h4{
+  position: relative;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Aldrich';
+  color: #25CBA8;
+  margin-top: -4%;
+}
+
+#yjet{
+  padding-left:40px;
+  padding-right:40px;
+}
+
+#yjet svg{
+  height:150px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#ylli, #ylli2, #ylli3{
+  display: none;
+}
+
+#nextButton{
+  display: none;
+  position: relative;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-right: 1%;
+  float: right;
+  padding:10px 24px;
+  color:white;
+  font-family:'Aldrich';
+  font-size: 20px;
+  background-color:#25CBA8;
+  border: 3px solid #25CBA8;
+  border-radius: 5px;
+}
+
+#nextButton:hover{
+  color:#25CBA8;
+  background-color: white;
+}
