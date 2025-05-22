@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 .container1{
     margin-left: 15%;
     margin-right: 15%; 
@@ -10,7 +15,7 @@
     margin-right: 15%;
 }
 
-.navbar{
+nav{
     height: 100px;
 }
 
@@ -52,10 +57,6 @@ nav ul li a{
 .linku:hover::after{
     width: 100%;
     transition: width .3s;
-}
-
-#div1{
-    position:relative;
 }
 
 #div2{
@@ -104,8 +105,7 @@ nav ul li a{
     padding: 17px 60px;
     margin-top:5%;
     margin-left: 10%;
-    
-  }
+}
 
   .btn1 span {
     position: relative; 
@@ -156,28 +156,22 @@ nav ul li a{
     position: relative;
     font-size:20px;
     text-align: center;
-    color: #6B706F ;
+    color: #807F7B;
     margin-top:-4%;
 }
 
 .banner-area h2{
     position: relative;
-    width:100%;
     text-align: center;
     margin:0;
-    padding: 0;
     color:  #4DBD9D ;
     font-size: 3.5em;
+    font-family: 'Allan';
 }
 
 .banner-area h2 span{
     color:#D3AE25 ;
 }
-
-.banner-area{
-    font-family: 'Allan';
-}
-
 
 video{
     width:850px;
@@ -222,12 +216,11 @@ video{
     flex-direction: column;
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     transition: 0.3s ease-in-out;
-
+    border-radius: 7px;
 }
 
 .div5 .card:hover{
     height:420px;
-
 }
 
 .div5 .card .imgBx{
@@ -303,7 +296,6 @@ video{
 footer{
     position: relative;
     height: 50px;
-    border-radius: 4px;
 }
 
 footer p{
@@ -321,6 +313,32 @@ footer p img{
     float:left;
     height: 60px;
     width: 60px;
+}
+
+.to-top{
+    background-color: white;
+    color:#4DBD9D;
+    position: fixed;
+    border: 2px solid #4DBD9D;
+    padding:8px;
+    border-radius: 4px;
+    bottom: 16px;
+    right:162px;
+    font-size: 23px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top:hover{
+    background-color:#4DBD9D;
+    color: white;
+}
+
+.to-top.active{
+    bottom: 32px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 

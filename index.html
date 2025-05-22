@@ -1,11 +1,15 @@
 <html>
     <head>
-        <title>Welcome</title>
+        <title>CodeParking</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/login.css">
         <link rel="stylesheet" href="assets/css/signUp.css">
         <link rel="stylesheet" href="assets/css/aboutUs.css">
         <link rel="stylesheet" href="assets/css/game.css">
+        <link rel="stylesheet" href="assets/css/viewScores.css">
+        <link rel="stylesheet" href="assets/css/sfidat.css">
         <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
@@ -13,12 +17,12 @@
         <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
         <div id="container">
-            <div id="div1">
-                <nav class="navbar">
+                <nav>
                     <a id="home" href="#">
                         <img src="assets/images/logo.png" id="logo">
                     </a>
@@ -29,11 +33,13 @@
                         <li id="about_us"><a href="#" class="linku">About us</a></li>
                         <li id="playGame" style="float: left;"><a href="#" class="linku">Play game</a></li>
                         <li id="logout" style="float: right;"><a href="#" class="linku">Log out</a></li>
+                        <li id="scores" style="float: right;"><a href="#" class="linku">View scores</a></li>
                     </ul>
                 </nav>
-            </div>            
         </div>
-
+        
+        <a href="#" class="to-top"><i class="fas fa-chevron-up"></i></a>
+        
         <!--Pjesa e indexit-->
         <div class="container1">
            
@@ -59,8 +65,8 @@
                 <h2>Teach kids courses that are <span class="type"></span></h2>
             </div>
             
-            <video controls>
-                <source src="assets/videos/Coding for Kids -What is coding for kids - Coding for beginners - Types of Coding -Coding Languages (online-video-cutter.com).mp4" type="video/mp4">
+            <video id="videoHome" controls>
+                <source src="assets/videos/codingForKids.mp4" type="video/mp4">
             </video>
             
             <div id="div4">
@@ -159,7 +165,7 @@
 
                 </div>
                 <div class="title2">Welcome to our team buddy</div>
-                <div class="sub-title">Student signup</div>
+                <div class="sub-title">Student/kid sign-up</div>
                 <div class="fields">
                     <div class="username">
                         <svg class="svg-icon" fill="#999" viewBox="0 0 20 20">
@@ -245,7 +251,7 @@
         </div>
 
         <div class="div4">
-            <img src="assets/images/logo3.png">
+            
         </div>
 
         <div id="div5">
@@ -374,7 +380,31 @@
             </div>
             <button id="nextButton">Next>></button>
         </div>
+    </div>
+    <!--Pjesa e view scores qe do te shfaqet me vone-->
+    <div class="container6">
+        <h2 id="header1">Hello buddy! Nice to see you again little friend.</h2>
+        <h4 id="header2">Here in this table you can check your game points and you can also 
+            compare them to your friends' points.</h4>
+        <table id="piket">
 
+        </table>
+    </div>
+
+    <!--Pjesa ku zgjidhet sfida perkatese-->
+    <div class="container7">
+        <h2 class="fjalia1">Welcome buddy</h2>
+        <h4>Please choose one of the following challenges.</h4>
+        <h5>(Hover the cards first)</h5>
+        <div class="containerr">
+            <div class="box">
+                <h2 class="namee">First challenge</h2>
+                <a href="#" class="playy">Play now</a>
+                <div class="circle"></div>
+                <img src="assets/images/mercedes2.png" class="challenge">
+            </div>
+        </div>
+    </div>
 
     </body>
     <script src="assets/js/typed.js"></script>
@@ -390,8 +420,20 @@
             loop:true
         });
     </script>
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/register.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/scores.js"></script>
+    <script>
+        krijoTab();
+    </script>
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".box"), {
+		    max: 25,
+		    speed: 400
+	    });
+    </script>
 </html>

@@ -104,6 +104,7 @@ hr{
     margin-top: 5%;
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 12%;
 }
 
 .row{
@@ -124,16 +125,28 @@ hr{
 
 .div4{
     position: relative;
-    margin-top: 5%;
-    width: 100%;
+    margin-top: 25%;
+    background: url("../images/aboutuss.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:500px;
+    height:300px;
+    margin:auto;
+    margin-bottom: 10%;
 }
 
-.div4 img{
-    position: relative;
-    width:60%;
-    height:500px;
-    margin-left:20%;
-    margin-right:20%;
+.div4::before{
+    position: absolute;
+    top:-40%;
+    left: -43%;
+    content: '';
+    width: 800px;
+    height: 510px;
+    background: url("../images/splash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    
 }
 
 #div5{

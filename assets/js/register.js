@@ -15,7 +15,7 @@ $(document).ready(function(){
         "Email EMAIL NOT NULL,"+
         "Password VARCHAR(100) NOT NULL)";
         transaction.executeSql(sql,undefined,function(){
-            alert("Table is created successfully");
+            //alert("Table is created successfully");
         });/*,function(){
             alert("Table is already being created");
         }*/
@@ -36,6 +36,7 @@ $(document).ready(function(){
             var sql="INSERT INTO users(Name,Surname,Email,Password) VALUES(?,?,?,?)";
             transaction.executeSql(sql,[name,surname,emaili,pass],function(){
                 alert("Your registration is complete. Welcome on board buddy!");
+                logini();
             },function(transaction,err){
                 alert(err.message);
             });
@@ -53,7 +54,6 @@ $(document).ready(function(){
 function register(){
     krijoTabele();
     shtoUser();
-    logini();
 }
 
 function shfaqTabelen(){
@@ -70,7 +70,7 @@ function shfaqTabelen(){
             var surname=row.Surname;
             var emaili=row.Email;
             var pass=row.Password;
-            $("#itemlist").append('<tr><td>'+id+'</td><td>'+name+'</td><td>'+surname+'</td><td>'+
+            $("#itemlist").append('<tr><td>'+id+'</td><td>'+name+'</td><td>'+surname+
             '</td><td>'+emaili+'</td></tr>');
         }
         }
@@ -115,15 +115,17 @@ function logimii(){
                     for(var i=0;i<result.rows.length;i++){
                         var row=result.rows.item(i);
                         var name=row.Name;
+                        var surname=row.Surname;
                         var pass=row.Password;
                         if(name===username)
                         {
                             ugjet=true;
                             if(pass===passwordi){
                                 alert("You logged in successfully. Get ready to play!");
-                                document.cookie="username="+name;
+                                document.cookie="username="+name; 
+                                document.cookie="surname="+surname;
                                 logoutButton();
-                                lojaa();
+                                sfidatt();
                                 break;
                             }
                             else

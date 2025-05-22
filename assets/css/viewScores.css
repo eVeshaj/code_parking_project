@@ -1,0 +1,54 @@
+.container6{
+    display: none;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%; 
+}
+
+#scores{
+    display: none;
+}
+
+.container6 h2{
+    position: relative;
+    color: #E2B510;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Aguafina Script';
+    font-weight: lighter;
+    letter-spacing: 3px;
+}
+
+.container6 h4{
+    position: relative;
+    margin-top: -3%;
+    color:#28E2CB;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Aldrich';
+}
+
+.container6 table{
+    position: relative;
+    margin: auto;
+    width: 40%;
+    border-collapse: collapse;
+    font-family: 'Aldrich';
+    font-size:20px;
+    color: #E2B510;
+}
+  
+.container6 table, th, td {
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.container6 th{
+    color: #E2B510;
+}
+
+.container6 td{
+    color:#9F9D94;
+}
+

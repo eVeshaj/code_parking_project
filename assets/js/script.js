@@ -1,7 +1,7 @@
 const nextButton=document.getElementById("nextButton");
+const gameButton=document.getElementById("gameButton");
 
 let makine=document.getElementById("makina");
-let gameButton=document.getElementById("gameButton");
 let gradeRight=270;
 let gradeLeft=90;
 let winSound=new sound("assets/sounds/win.mp3");
@@ -10,8 +10,8 @@ let shootingStar=new sound("assets/sounds/shootingstar.mp3");
 
 
 function returnVector(){
-        let vektori=document.getElementById("teksti").value; //stringe qe mban te dhenat qe shkruhen ne textarea
-    let vektor=[]; //cdo element i ketij vektori eshte nje rresht i textarea
+    let vektori=document.getElementById("teksti").value; 
+    let vektor=[]; 
     let j=0;
     for(let i=0;i<vektori.length;i++){
         if(vektori[i]==='\n'){
@@ -28,10 +28,8 @@ function lexo(){
     vektorr=returnVector();
     for(let x of vektorr)
     {
-        console.log(x); //thjesht per testim
         let gjatesia=x.length;
-        let numer=parseInt(x.substr(gjatesia-3,3));//duke supozuar qe tre karakteret e fundit te cdo rreshti te textarea
-                                                        //jane numri i nevojshem i px per zhvendosje psh move right 100
+        let numer=parseInt(x.substr(gjatesia-3,3));
         if(isNaN(numer))
         {
             if(x=="TURN RIGHT")
@@ -64,7 +62,7 @@ function lexo(){
             }
         }
     }
-
+    shtoPiket();
 }
 
 
@@ -162,16 +160,14 @@ function winning(){
             else if(vektorr.length===3){
                 showFirstStar();  
             }
-            else{
-                $("#yjet").hide();
-            }          
             $("#nextButton").show(2200);
         });
     }
 }
 
 function nexti(){
-    $("#fitore").hide();
+    returnBackSound().stop();
+    sfidatt();
 }
 
 function showFirstStar(){
@@ -191,6 +187,11 @@ function showThirdStar(){
 
 gameButton.addEventListener('click',lexo);
 nextButton.addEventListener('click',nexti);
+
+/*$("#gameButton").click(function(){
+    lexo();
+});*/
+
 
 /*function moveRight(vlera){
     let left=parseInt(window.getComputedStyle(makina).getPropertyValue("left"));
